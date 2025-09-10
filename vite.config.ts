@@ -1,17 +1,15 @@
-import path from 'path';
-import { defineConfig, loadEnv } from 'vite';
+import { defineConfig } from 'vite';
+import react from '@vitejs/plugin-react';
 
-export default defineConfig(({ mode }) => {
-    const env = loadEnv(mode, '.', '');
-    return {
-      define: {
-        'process.env.API_KEY': JSON.stringify(env.GEMINI_API_KEY),
-        'process.env.GEMINI_API_KEY': JSON.stringify(env.GEMINI_API_KEY)
-      },
-      resolve: {
-        alias: {
-          '@': path.resolve(__dirname, '.'),
-        }
-      }
-    };
+// Get the repository name from the homepage URL in package.json
+// This assumes your homepage is in the format 'https://<username>.github.io/<repo-name>'
+// If you are using a custom domain, you can simply set the base to '/'
+const homepage = require('./package.json').homepage;
+const repoName = homepage ? `/${homepage.split('/').pop()}/` : '/';
+
+// https://vitejs.dev/config/
+export default defineConfig({
+  plugins: [react()],
+  // Set the base path for the build
+  base: repoName,
 });
