@@ -1,0 +1,5 @@
+{
+  "name": "Minimalist Video Gallery",
+  "description": "A minimalist webpage presenting a curated collection of videos in a clean, responsive grid layout. Click on any video thumbnail to watch it in a modal player.",
+  "requestFramePermissions": []
+}
