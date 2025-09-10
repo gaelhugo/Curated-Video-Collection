@@ -1,15 +1,10 @@
-import { defineConfig } from 'vite';
-import react from '@vitejs/plugin-react';
-
-// Get the repository name from the homepage URL in package.json
-// This assumes your homepage is in the format 'https://<username>.github.io/<repo-name>'
-// If you are using a custom domain, you can simply set the base to '/'
-const homepage = require('./package.json').homepage;
-const repoName = homepage ? `/${homepage.split('/').pop()}/` : '/';
+import { defineConfig } from 'vite'
+import react from '@vitejs/plugin-react'
 
 // https://vitejs.dev/config/
 export default defineConfig({
   plugins: [react()],
-  // Set the base path for the build
-  base: repoName,
-});
+  // This is the crucial line for GitHub Pages deployment. 
+  // It sets the base path to the repository name.
+  base: "/Curated-Video-Collection/",
+})
