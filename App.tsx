@@ -101,7 +101,7 @@ const App: React.FC = () => {
             Curated Video Collection
           </h1>
           <p className="mt-3 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
-            A selection of compelling visual stories and ideas.
+             A selection of compelling comment on creative coding.
           </p>
         </div>
       </header>
