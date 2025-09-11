@@ -98,7 +98,7 @@ const App: React.FC = () => {
       <header className="py-8 md:py-12">
         <div className="container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-5xl font-bold tracking-tight">
-            Curated Video Collection
+            La belle brochette
           </h1>
           <p className="mt-3 text-lg md:text-xl text-gray-400 max-w-2xl mx-auto">
              A selection of compelling comment on creative coding.
